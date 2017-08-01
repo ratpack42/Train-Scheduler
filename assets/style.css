@@ -1,0 +1,38 @@
+.jumbotron{
+    
+   background-color: #800000 ;
+    font-family: 'Anton', sans-serif;
+    color:white;
+}
+
+h1{
+    text-align: center;
+}
+
+.panel-heading{
+    color:#6b6b6b ;
+    background-color:#800000 !important;
+    font-family: 'Anton', sans-serif;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd ;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd ;
+}
+
+
+[11:15] 
+.panel{
+    border-color: #800000 !important;
+}
