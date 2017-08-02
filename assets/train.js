@@ -65,11 +65,11 @@ $(document).ready(function(){
       console.log(childSnapshot.val().joinDate);
 
       // full list of items to the well
-      $("#trainAdded").append("<div class='well'><span id='name'> " + childSnapshot.val().name +
-        " </span><span id='destination'> " + childSnapshot.val().destination +
-        " </span><span id='firstTrainTime'> " + childSnapshot.val().firstTrainTime +
-        " </span><span id='frequency'> " + childSnapshot.val().frequency + " </span></div>");
-
+      $("#trainAdded").append("<tr><td>" + snapshot.val().trainName + "</td>" +
+    "<td>" + snapshot.val().destination + "</td>" + 
+    "<td>" + snapshot.val().firstTrainTime + " mins" + "</td>" + 
+    "<td>" + snapshot.val().frequency + "</td>" +
+    "</td></tr>");
     // Handle the errors
     }, function(errorObject) {
       console.log("Errors handled: " + errorObject.code);
