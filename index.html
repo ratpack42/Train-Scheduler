@@ -6,8 +6,9 @@
   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/style.css">
   <script src="https://use.fontawesome.com/fd3fe8c252.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+ 
 
 </head>
 <body>
@@ -26,15 +27,20 @@
     <div class="panel panel-primary">
     <div class="panel-heading"><i class="fa fa-address-card" aria-hidden="true"></i> Current Time Schedule</div>
        <div class="panel-body">
-         <table id= "trainAdded">
+         <table id= "trainAdded" class="table table-hover">
+          <thread>
             <tr>
-              <th id="trainDisplay">Train</th>
-              <th id="nameDisplay">Name</th>
-              <th id="destinationDisplay">Destination</th>
-              <th id="frequencyDisplay">Frequency</th>
-              <th id="nextArrivalDisplay">Next Arrival</th>
+              <th>Train Name</th>
+              <th>Destination</th>
+              <th>Frequency (min)</th>
+              <th>Next Arrival</th>
+              <th> Minutes Away</th>
             </tr>
-            </table>
+            </thread>
+            <tbody>
+
+            </tbody>
+          </table>
          </div>
         </div>
 
@@ -48,20 +54,20 @@
         <div class="panel-body">
            <form role="form">
               <div class="form-group">
-                  <label id="trainName">Train Name:</label>
-                  <input type="text" class="form-control" id="search">
+                  <label>Train Name:</label>
+                  <input type="text" class="form-control" id="trainName">
           
-                 <label id="destination">Destination</label>
-                  <input class="form-control">
+                 <label>Destination</label>
+                  <input  type="text" class="form-control" id="destination">
       
-                <label id="firstTrainTime">First Train Time (military time)</label>
-                  <input class="form-control">
+                <label>First Train  (military time)</label>
+                  <input type="text" class="form-control" id="firstTrain">
 
-                 <label id="frequency">Frequency</label>
-                   <input class="form-control">
+                 <label>Frequency</label>
+                   <input type="text" class="form-control" id="frequency">
                 </div>
         
-              <button id= "add-train" type="button" class="btn btn-danger">Add</button>
+              <button type="button" class="btn btn-danger" id="submit">Add</button>
             </form>
          </div>
         </div>
@@ -70,19 +76,6 @@
   </div>
   </div>
 </div>
-
-<!-- Required site information Front End
-- Jumbotron
-
-<div class="jumbotron">
-  <h1>Hello, world!</h1>
-  <p>...</p>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-</div>
-CSS Grid - One row size 12
-Panel heading 
-Panel container
-Panler body --> 
 <script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
