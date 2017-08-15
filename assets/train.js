@@ -29,7 +29,7 @@ firebase.initializeApp(config);
 var trainData = firebase.database();
 
   // Capture Button Click
-    $("#addTrainBtn").on("click", function(){
+    $("#submit").on("click", function(){
   
   //Initialize Values
       var trainName = $("#trainName").val().trim();
